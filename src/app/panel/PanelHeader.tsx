@@ -8,18 +8,29 @@ import { User } from '@prisma/client';
 import ExitIcon from '@/components/icons/ExitIcon';
 import { signOutAction } from '@/actions/auth';
 import { Button } from '@/components/ui/button';
-import Logo from '@/components/Logo';
-import LogoText from '@/components/LogoText';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const PanelHeader = async ({ user }: { user: User }) => {
   const t = await getTranslations();
   return (
     <div className='flex items-center justify-between w-full h-16 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg p-4'>
       <div className='flex gap-2'>
-        <Logo className='text-brand' width={50} />
-        <Link href='/' className='h-auto hidden md:block text-brand'>
-          <LogoText className='w-30' />
+        <Link href='/'>
+          <Image
+            src='/assets/logo_with_text_1.png'
+            width={200}
+            height={40}
+            className='h-auto hidden md:block'
+            alt='App Logo'
+          />
+          <Image
+            src='/app_logo.png'
+            width={60}
+            height={40}
+            className='h-auto md:hidden'
+            alt='App Logo'
+          />
         </Link>
       </div>
       <div className='flex gap-2'>

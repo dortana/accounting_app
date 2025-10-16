@@ -8,7 +8,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import Link from 'next/link';
-import Logo from './Logo';
+import Image from 'next/image';
 
 const SiteToggleMenu = ({ websiteLinks }: { websiteLinks: any }) => {
   const [open, setOpen] = useState(false);
@@ -22,9 +22,14 @@ const SiteToggleMenu = ({ websiteLinks }: { websiteLinks: any }) => {
       <SheetContent side='left' className='w-[80vw]'>
         <SheetTitle></SheetTitle>
         <div className='flex items-center gap-2'>
-          <Logo className='text-brand' />
           <Link href='/'>
-            <h2 className='font-medium tracking-widest'>RovixPro</h2>
+            <Image
+              src='/assets/logo_with_text_1.png'
+              width={200}
+              height={40}
+              className='h-auto'
+              alt='App Logo'
+            />
           </Link>
         </div>
         <hr className='mt-6' />

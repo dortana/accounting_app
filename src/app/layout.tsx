@@ -13,8 +13,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'RealIdea - Panel',
-  description: 'RealIdea - AI powered idea generator',
+  title: 'KAPAS - Accounting',
+  description: 'KAPAS Software Accounting Application',
   icons: {
     icon: '/app_logo.png',
   },

@@ -40,13 +40,13 @@ export const NewPasswordEmailTemplate = ({
         <Text style={paragraph}>Not expecting this email?</Text>
         <Text style={paragraph}>
           Contact{' '}
-          <Link href='mailto:info@dortana.com' style={link}>
-            info@dortana.com
+          <Link href='mailto:office@kapas.at' style={link}>
+            office@kapas.at
           </Link>{' '}
           if you did not request this code.
         </Text>
       </Container>
-      <Text style={footer}>Securely powered by RovixPro.</Text>
+      <Text style={footer}>Securely powered by KAPAS.</Text>
     </Body>
   </Html>
 );

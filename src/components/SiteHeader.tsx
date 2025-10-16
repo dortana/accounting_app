@@ -1,12 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import React from 'react';
-import Logo from './Logo';
 import { Button } from './ui/button';
 import { auth } from '@/lib/auth';
 import LanguageSelectorButton from './language/LanguageSelectorButton';
 import { headers } from 'next/headers';
 import SiteToggleMenu from './SiteToggleMenu';
+import Image from 'next/image';
 
 const SiteHeader = async () => {
   const session = await auth.api.getSession({
@@ -40,11 +40,21 @@ const SiteHeader = async () => {
     <header className='h-20 sticky top-0 left-0 w-full px-4 max-sm:px-2 flex items-center justify-between border-b border-[rgba(29, 29, 29, 0.08)] bg-white z-10'>
       <div className='flex items-center gap-4'>
         <div className='flex items-center gap-2'>
-          <Logo className='text-brand' />
           <Link href='/'>
-            <h2 className='font-medium tracking-widest max-md:hidden'>
-              RovixPro
-            </h2>
+            <Image
+              src='/assets/logo_with_text_1.png'
+              width={200}
+              height={40}
+              className='h-auto hidden md:block'
+              alt='App Logo'
+            />
+            <Image
+              src='/app_logo.png'
+              width={60}
+              height={40}
+              className='h-auto md:hidden'
+              alt='App Logo'
+            />
           </Link>
         </div>
         <div className='h-6 border-l border-separate max-md:hidden' />

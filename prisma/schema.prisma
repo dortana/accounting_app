@@ -3,12 +3,12 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id            String         @id @map("_id")
+  id            String         @id @default(uuid())
   name          String?
   email         String
   emailVerified Boolean        @default(false)
@@ -26,7 +26,7 @@ model User {
 }
 
 model Session {
-  id        String   @id @map("_id")
+  id        String   @id @default(uuid())
   expiresAt DateTime
   token     String
   createdAt DateTime @default(now())
@@ -41,7 +41,7 @@ model Session {
 }
 
 model Account {
-  id                    String    @id @map("_id")
+  id                    String    @id @default(uuid())
   accountId             String
   providerId            String
   userId                String
@@ -60,7 +60,7 @@ model Account {
 }
 
 model Verification {
-  id         String   @id @map("_id")
+  id         String   @id @default(uuid())
   identifier String
   value      String
   expiresAt  DateTime
@@ -80,7 +80,7 @@ enum JournalDocumentType {
 }
 
 model JournalEntry {
-  id           String              @id @map("_id")
+  id           String              @id @default(uuid())
   date         DateTime
   entrySort    Int
   documentType JournalDocumentType

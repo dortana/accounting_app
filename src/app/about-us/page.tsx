@@ -172,7 +172,7 @@ export default async function AboutUsPage() {
       year: '2019',
       title: t('Company Founded'),
       description:
-        'RovixPro was established in Budapest with a mission to simplify financial management for individuals and small businesses through innovative technology.',
+        'KAPAS was established in Styria, Austria with a mission to simplify financial management for individuals and small businesses through innovative technology.',
       icon: (
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -373,7 +373,7 @@ export default async function AboutUsPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center max-w-4xl mx-auto'>
               <Badge variant='secondary' className='mb-6 text-sm font-medium'>
-                {t('About RovixPro')}
+                {t('About KAPAS')}
               </Badge>
               <h1 className='text-4xl lg:text-6xl font-bold text-foreground mb-6'>
                 {t('Empowering Financial')}
@@ -381,7 +381,7 @@ export default async function AboutUsPage() {
               </h1>
               <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8'>
                 {t(
-                  'RovixPro is a next-generation financial manager that empowers individuals and businesses to take full control of their budgets, expenses, and investments through intuitive,data-driven tools.',
+                  'We take our confidentiality obligation seriously and always act in the best interests of our clients. We keep you informed about legal changes, potential risks, and key points of focus during tax audits or financial police checks. In times of crisis, we prepare forecasts, identify optimization options, and advise you on restructuring.',
                 )}
               </p>
               <div className='flex flex-wrap gap-4 justify-center'>
@@ -485,12 +485,12 @@ export default async function AboutUsPage() {
                 <div className='space-y-6 text-muted-foreground leading-relaxed'>
                   <p className='text-lg'>
                     {t(
-                      'Founded in Budapest in 2019, RovixPro emerged from a simple observation: traditional financial management tools were either too complex for everyday users or too simplistic for serious financial planning.',
+                      'Founded in Styria, Austria in 2019, KAPAS emerged from a simple observation: traditional financial management tools were either too complex for everyday users or too simplistic for serious financial planning.',
                     )}
                   </p>
                   <p>
                     {t(
-                      'Our platform streamlines expense tracking, goal setting, and portfolio analysis to deliver real-time insights and personalized recommendations. Built on intuition and powered by data, RovixPro makes smarter money management accessible to individuals and businesses alike.',
+                      'Our platform streamlines expense tracking, goal setting, and portfolio analysis to deliver real-time insights and personalized recommendations. Built on intuition and powered by data, KAPAS makes smarter money management accessible to individuals and businesses alike.',
                     )}
                   </p>
                   <p>
@@ -629,7 +629,7 @@ export default async function AboutUsPage() {
               </h2>
               <p className='text-lg text-muted-foreground'>
                 {t(
-                  "Key milestones in RovixPro's evolution from startup to industry leader.",
+                  "Key milestones in KAPAS's evolution from startup to industry leader.",
                 )}
               </p>
             </div>
@@ -681,7 +681,7 @@ export default async function AboutUsPage() {
             </h2>
             <p className='text-xl text-blue-100 mb-8 leading-relaxed'>
               {t(
-                'Join thousands of users who trust RovixPro to manage their finances smarter, not harder.',
+                'Join thousands of users who trust KAPAS to manage their finances smarter, not harder.',
               )}
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

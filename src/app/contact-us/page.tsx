@@ -12,7 +12,7 @@ const ContactUsPage = async () => {
       <SiteHeader />
       <div className='flex flex-wrap px-8 md:px-16 max-md:flex-col-reverse py-8'>
         <div className='w-full md:w-1/2 lg:w-2/3'>
-          <Map lng={18.9260062} lat={47.3793341} />
+          <Map lng={15.6255903} lat={47.2147423} />
           <div className='flex-col sm:flex-row flex w-full mt-4 gap-2'>
             <div className='flex items-center flex-col justify-center gap-2 flex-1 border rounded-md p-2 shadow group'>
               <svg
@@ -35,7 +35,8 @@ const ContactUsPage = async () => {
               </svg>
               <span className='font-semibold'>{t('Address')}</span>
               <p className='text-[rgba(29,29,29,0.64)] group-hover:text-brand transition-all duration-200 text-center'>
-                1112 Budapest, Keserűfű utca 4
+                A-8160 Weiz, Gleisdorfer Straße 23 <br />
+                Steiermark, Österreich
               </p>
             </div>
             <div className='flex items-center flex-col justify-center gap-2 flex-1 border rounded-md p-2 shadow group'>
@@ -61,7 +62,7 @@ const ContactUsPage = async () => {
               </svg>
               <span className='font-semibold'>{t('Phone')}</span>
               <p className='text-[rgba(29,29,29,0.64)] group-hover:text-brand transition-all duration-200'>
-                +36 30 527 5249
+                +43 (3172) 3780-0
               </p>
             </div>
             <div className='flex items-center flex-col justify-center gap-2 flex-1 border rounded-md p-2 shadow group'>
@@ -93,7 +94,7 @@ const ContactUsPage = async () => {
               </svg>
               <span className='font-semibold'>{t('Email')}</span>
               <p className='text-[rgba(29,29,29,0.64)] group-hover:text-brand transition-all duration-200'>
-                info@dortana.com
+                office@kapas.at
               </p>
             </div>
           </div>

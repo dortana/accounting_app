@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from './Logo';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
@@ -15,14 +14,19 @@ const SiteFooter = async () => {
       <div className='flex items-baseline flex-wrap'>
         <div className='w-full md:flex-1 space-y-4'>
           <div className='flex items-center gap-2'>
-            <Logo className='text-brand' />
             <Link href='/'>
-              <h2 className='font-medium tracking-widest'>RovixPro</h2>
+              <Image
+                src='/assets/logo_with_text_1.png'
+                width={200}
+                height={40}
+                className='h-auto'
+                alt='App Logo'
+              />
             </Link>
           </div>
           <p className='text-zinc-500 text-justify'>
             {t(
-              'RovixPro is a next-generation financial manager that empowers individuals and businesses to take full control of their budgets, expenses, and investments through intuitive, data-driven tools. Our platform streamlines expense tracking, goal setting, and portfolio analysis to deliver real-time insights and personalized recommendations. Built on a foundation of security and innovation, RovixPro makes smarter money management effortless and accessible for everyone.',
+              'We take our confidentiality obligation seriously and always act in the best interests of our clients. We keep you informed about legal changes, potential risks, and key points of focus during tax audits or financial police checks. In times of crisis, we prepare forecasts, identify optimization options, and advise you on restructuring. We stand by your side as a reliable partner, supporting you through thick and thin. We embrace the unique challenges we face every day and look forward to actively shaping the future with you. We are successful when we enjoy the trust of our customers as a reliable partner and can achieve the best possible results for them through our commitment.',
             )}
           </p>
           <br />
@@ -84,7 +88,8 @@ const SiteFooter = async () => {
                 <span>{t('Address')}</span>
               </div>
               <p className='text-[rgba(29,29,29,0.64)] ml-8'>
-                1117 Budapest, Szerémi út 4.
+                A-8160 Weiz, Gleisdorfer Straße 23 <br />
+                Steiermark, Österreich
               </p>
             </div>
             <div className='space-y-1 mt-2'>
@@ -110,7 +115,9 @@ const SiteFooter = async () => {
                 </svg>
                 <span>{t('Phone')}</span>
               </div>
-              <p className='text-[rgba(29,29,29,0.64)] ml-8'>+36 30 527 5249</p>
+              <p className='text-[rgba(29,29,29,0.64)] ml-8'>
+                +43 (3172) 3780-0
+              </p>
             </div>
             <div className='space-y-1 mt-2'>
               <div className='flex items-center gap-2 font-semibold'>
@@ -141,25 +148,23 @@ const SiteFooter = async () => {
                 </svg>
                 <span>{t('Email')}</span>
               </div>
-              <p className='text-[rgba(29,29,29,0.64)] ml-8'>
-                info@dortana.com
-              </p>
+              <p className='text-[rgba(29,29,29,0.64)] ml-8'>office@kapas.at</p>
             </div>
           </div>
           <div className='flex items-center gap-3 w-full justify-end -mt-11'>
             <Image
-              src='/assets/hungary.webp'
-              width={50}
+              src='/assets/austria.png'
+              width={45}
               height={100}
-              className='h-auto rounded-md'
-              alt='hungary'
+              className='h-auto'
+              alt='austria'
             />
             <Image
               src='/assets/european-union.webp'
               width={50}
               height={100}
-              className='h-auto rounded-md'
-              alt='hungary'
+              className='h-auto'
+              alt='european-union'
             />
           </div>
         </div>
@@ -167,7 +172,7 @@ const SiteFooter = async () => {
       <hr />
       <div className='flex items-center justify-between flex-wrap gap-4 max-md:flex-col-reverse'>
         <p className='text-sm max-md:mt-6'>
-          {t('Copyright © {year} RovixPro. All rights reserved.', {
+          {t('Copyright © {year} KAPAS. All rights reserved.', {
             year: new Date().getFullYear(),
           })}
         </p>

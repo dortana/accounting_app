@@ -25,7 +25,7 @@ export const VerifyEmailTemplate = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`https://rovixpro.vercel.app/assets/bull.png`}
+          src={`https://accounting-app-vert.vercel.app/app_logo.png`}
           alt='Plaid'
           style={logo}
         />
@@ -46,7 +46,7 @@ export const VerifyEmailTemplate = ({
           if you did not request this code.
         </Text>
       </Container>
-      <Text style={footer}>Securely powered by RovixPro.</Text>
+      <Text style={footer}>Securely powered by KAPAS.</Text>
     </Body>
   </Html>
 );

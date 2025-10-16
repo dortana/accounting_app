@@ -25,7 +25,7 @@ export const NewPasswordEmailTemplate = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`https://rovixpro.vercel.app/assets/bull.png`}
+          src={`https://accounting-app-vert.vercel.app/app_logo.png`}
           alt='Plaid'
           style={logo}
         />

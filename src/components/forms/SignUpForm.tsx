@@ -17,11 +17,11 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { signUpAction } from '@/actions/auth';
 import { useRouter } from 'next/navigation';
-import Logo from '../Logo';
 import SocialLogin from '../SocialLogin';
 import { cn } from '@/lib/utils';
 import EyeIcon from '../icons/EyeIcon';
 import EyeSlashIcon from '../icons/EyeSlashIcon';
+import Image from 'next/image';
 
 const SignUpForm = () => {
   const t = useTranslations();
@@ -48,7 +48,15 @@ const SignUpForm = () => {
   return (
     <Card className='border-0 shadow-none w-full md:w-2/3 sm:max-w-[440px]'>
       <CardHeader>
-        <Logo className='text-brand mx-auto mb-4' width={70} />
+        <Link href='/' className='mx-auto mb-10'>
+          <Image
+            src='/assets/logo_with_text_1.png'
+            width={200}
+            height={40}
+            className='h-auto'
+            alt='App Logo'
+          />
+        </Link>
         <CardTitle className='text-2xl'>{t('Sign Up')}</CardTitle>
         <CardDescription>
           {t('Create your account to get started.')}

@@ -19,10 +19,11 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
-import Logo from '../Logo';
 import { toast } from 'sonner';
 import BackIcon from '../icons/BackIcon';
 import { resendCodeAction, verifyForgotAction } from '@/actions/auth';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const VerificationForgotForm = () => {
   const t = useTranslations();
@@ -99,7 +100,15 @@ const VerificationForgotForm = () => {
   return (
     <Card className='border-0 shadow-none w-full md:w-2/3 sm:max-w-[440px] relative'>
       <CardHeader>
-        <Logo className='text-brand mx-auto mb-4' width={70} />
+        <Link href='/' className='mx-auto mb-10'>
+          <Image
+            src='/assets/logo_with_text_1.png'
+            width={200}
+            height={40}
+            className='h-auto'
+            alt='App Logo'
+          />
+        </Link>
         <CardTitle className='text-2xl'>{t('Verification')}</CardTitle>
         <CardDescription>
           {t('Please enter the code sent to {des}', {

@@ -11,7 +11,7 @@ const prisma = new PrismaClient();
 export const auth = betterAuth({
   appName: 'KAPAS',
   database: prismaAdapter(prisma, {
-    provider: 'mongodb',
+    provider: 'postgresql',
   }),
   user: {
     additionalFields: {
@@ -50,17 +50,19 @@ export const auth = betterAuth({
         };
       },
     },
-    facebook: {
-      clientId: process.env.FACEBOOK_CLIENT_ID as string,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET as string,
+    microsoft: {
+      clientId: process.env.MICROSOFT_CLIENT_ID as string,
+      clientSecret: process.env.MICROSOFT_CLIENT_SECRET as string,
+      tenantId: 'common',
+      authority: 'https://login.microsoftonline.com',
+      prompt: 'select_account',
       mapProfileToUser(profile) {
-        const nameParts = (profile.name || '').split(' ');
         return {
           email: profile.email,
-          image: profile.picture?.data?.url,
-          firstName: nameParts[0] || '',
-          lastName: nameParts[1] || '',
-          emailVerified: profile.email_verified,
+          image: profile.picture,
+          firstName: profile.given_name,
+          lastName: profile.family_name,
+          emailVerified: !!profile.verified_primary_email?.[0],
         };
       },
     },

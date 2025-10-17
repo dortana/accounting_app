@@ -2,11 +2,11 @@ import { authClient } from '@/lib/auth-client';
 import React from 'react';
 import { Button } from './ui/button';
 import { GoogleIcon } from './icons/GoogleIcon';
-import FacebookIcon from './icons/FacebookIcon';
+import MicrosoftIcon from './icons/MicrosoftIcon';
 
 const SocialLogin = () => {
   const [isloadingGoogle, setIsLoadingGoogle] = React.useState(false);
-  const [isloadingFacebook, setIsLoadingFacebook] = React.useState(false);
+  const [isloadingMicrosoft, setIsLoadingMicrosoft] = React.useState(false);
   const signInWithGoogle = async () => {
     setIsLoadingGoogle(true);
     await authClient.signIn.social({
@@ -15,13 +15,13 @@ const SocialLogin = () => {
     });
     setIsLoadingGoogle(false);
   };
-  const signInWithFacebook = async () => {
-    setIsLoadingFacebook(true);
+  const signInWithMicrosoft = async () => {
+    setIsLoadingMicrosoft(true);
     await authClient.signIn.social({
-      provider: 'facebook',
+      provider: 'microsoft',
       callbackURL: '/panel/dashboard',
     });
-    setIsLoadingFacebook(false);
+    setIsLoadingMicrosoft(false);
   };
   return (
     <div className='flex gap-2'>
@@ -36,12 +36,12 @@ const SocialLogin = () => {
       </Button>
       <Button
         variant='outline'
-        onClick={signInWithFacebook}
-        isLoading={isloadingFacebook}
+        onClick={signInWithMicrosoft}
+        isLoading={isloadingMicrosoft}
         className='flex-1'
       >
-        <FacebookIcon />
-        Facebook
+        <MicrosoftIcon />
+        Microsoft
       </Button>
     </div>
   );
